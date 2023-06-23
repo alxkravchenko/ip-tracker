@@ -1,0 +1,47 @@
+
+-
+	header_list = [
+		{
+			title: 'ip address',
+			text: '-',
+			class: 'js-ip-address',
+		},
+		{
+			title: 'location',
+			text: '-',
+			class: 'js-location',
+		},
+		{
+			title: 'timezone',
+			text: '-',
+			class: 'js-timezone',
+		},
+		{
+			title: 'isp',
+			text: '-',
+			class: 'js-isp',
+		},
+	]
+
+header.header
+	+picture({
+		img: 'header-bg.png',
+		alt: 'abstract background',
+		class: 'header__bg_w',
+		img_class: 'header__bg',
+	})
+	.container.header__container
+		h1.header__title IP Address Tracker
+		form.header_form.js-header-form(action="#" method="POST")
+			input(type="text", name="track_input" class="header_form__input js-track-input" placeholder="Search for any IP adress or domain")
+			button(type="button" class="header_form__btn js-track-btn")
+				.header_form__btn_icon
+					+icon('icon-arrow','icon--size_mod')
+			.header_form__error.js-form-error
+				| You have to enter a valid IP address
+		ul.header_list
+			each item in header_list
+				li.header_list__item
+					span.header_list__title!=item.title
+					span.header_list__text(class=item.class)!=item.text
+

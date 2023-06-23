@@ -1,0 +1,40 @@
+@import './helpers';
+// Colors
+:root {
+	//fonts
+	--font-1: 'SFpro', Arial, sans-serif;
+
+	//colors
+
+	--black: #000;
+	--text: #212529;
+	--white: #fff;
+	--altblack: #2a2a2a;
+	--gray: #6c757d;
+	--lightgray: #D9D9D9;
+	--darkgray: #3F3F3F;
+	--lightblue: #86b7fe;
+	--blue: #0d6efd;
+	--red: #dc3545;
+
+	//content layout
+	--gl-offset: 4.5rem;
+	--page-width: 100rem;
+
+	//utils
+	--full-screen: calc(var(--vh, 1vh) * 100);
+}
+
+// Sizes
+$root-font-size: 16px;
+
+
+//breakpoints
+$point_1: 1200px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 640px;
+$point_6: 480px;
+$point_7: 375px;
+$point_8: 320px;
